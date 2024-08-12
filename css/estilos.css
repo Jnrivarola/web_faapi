@@ -1,0 +1,928 @@
+:root {
+    --color-primario: #FF8F0C;
+    --color-secundario: #005D7F;
+    --color-backround: #000000;
+    --color-texto: #DFDFDF;
+    --text-default: 'Poppins', sans-serif;
+    --color-formulario: linear-gradient(to bottom, #1573B9, #00123E);
+    --color-item: #003196;
+    --color-texto-item: #E3FBFF;
+    --color-boton-pago: #FF6600;
+    --color-boton-confirmar: #00309E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-default);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+
+body {
+    background-color: var(--color-backround);
+    background-image: url('../img/fondo1.jpg');
+    background-size: cover;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh; 
+}
+
+.menu-principal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--color-backround);
+    padding: 1.5vh 0.5vw;
+    text-align: right;
+    z-index: 1000;
+}
+
+.menu-principal::after {
+    content: '';
+    display: block;
+    width: 80vw; 
+    margin: 0 auto;
+    border-bottom: 0.2vh solid #FFFFFF; 
+}
+
+.logos {
+    position: fixed;
+    bottom: 2.6vh; 
+    left: 6.25vw; 
+    display: flex;
+    align-items: center;
+}
+
+.logos .logo-1 {
+    width: 4.16vw; 
+    height: auto;
+    margin-right: 2.6vw; 
+}
+
+.logos .logo-2 {
+    width: 7.81vw; 
+    height: auto;  
+}
+
+.animalitos {
+    position: fixed;
+    bottom: 30vh; 
+    left: 40.1vw; 
+    display: flex;
+    align-items: center;
+}
+
+.logo-letras {
+    position: fixed;
+    bottom: 9.4vh; 
+    left: 36.4vw; 
+    display: flex;
+    align-items: center;
+}
+
+.letra-abajo {
+    position: fixed;
+    bottom: 6vh;
+    left: 31.25vw; 
+    display: flex;
+    align-items: center;
+}
+
+.desplazar-izquierda {
+    left: 31.25vw; 
+    transition: left 0.5s ease;
+}
+
+
+.menu-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 1vh 9.38vw;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.menu-principal li {
+    margin-left: 4.17vw; 
+    font-size: 1vw; 
+}
+
+.menu-principal .enlaces a{
+    display: inline-block;
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.menu-principal .enlaces a:hover {
+    transform: scale(1.1);
+}
+
+.menu-principal .enlaces .conocenos{
+    margin-right: 10vw;
+}
+
+.seccion-inscripcion {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.formulario-contenedor {
+    background: var(--color-formulario);
+    padding: 1.04vw;
+    border-radius: 0.52vw;
+    box-shadow: 0 0.83vh 1.67vh rgba(0, 0, 0, 0.2);
+    max-width: 20.83vw;
+    width: 100%;
+    position: absolute;
+    right: -100%;
+    transition: right 1s ease-out;
+    margin-top: 2.08vh;
+}
+
+.formulario-contenedor.mostrar {
+    right: 5.2vw;
+}
+
+.formulario-inscripcion h2 {
+    color: var(--color-texto-item);
+    text-align: center;
+    margin-bottom: 1.67vh;
+}
+
+.formulario-inscripcion label {
+    color: var(--color-texto-item);
+    display: block;
+    margin-bottom: 0.52vh;
+    font-weight: bold;
+}
+
+.formulario-inscripcion p {
+    color: var(--color-texto-item);
+    padding-top: 0.5vh;
+   
+}
+
+.translation {
+    font-size: 0.62vw; 
+    color: #bbbbbb;
+    display: inline-block;
+}
+
+.formulario-inscripcion input {
+    width: 100%;
+    padding: 0.83vh;
+    margin-bottom: 1.67vh;
+    border: none;
+    border-radius: 0.52vw;
+    background-color: var(--color-texto);
+    color: #000000;
+}
+
+.formulario-inscripcion input::placeholder {
+    color: #CCCCCC;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-gestionar, .btn-confirmar {
+    padding: 0.83vh 1.67vw;
+    border: none;
+    border-radius: 0.52vw;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-gestionar {
+    background-color: var(--color-boton-pago);
+}
+
+.btn-confirmar {
+    background-color: var(--color-boton-confirmar);
+}
+
+.btn-gestionar:hover {
+    background-color: darken(var(--color-boton-pago), 10%);
+}
+
+.btn-confirmar:hover {
+    background-color: darken(var(--color-boton-confirmar), 10%);
+}
+
+.btn-pago-transferencia {
+    padding: 0.83vh 1.67vw;
+    border: none;
+    border-radius: 0.52vw;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pago-transferencia {
+    background-color: var(--color-boton-pago);
+}
+
+.btn-pago-transferencia:hover {
+    background-color: darken(var(--color-secundario), 10%); /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* CONTACTO */
+.seccion-contacto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.formulario-contacto label {
+    color: var(--color-texto-item);
+    display: block;
+    margin-bottom: 0.52vh;
+    font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 0.83vh;
+    margin-bottom: 1.67vh;
+    border: none;
+    border-radius: 0.52vw;
+    background-color: var(--color-texto);
+    color: #000000;
+}
+
+.formulario-contacto textarea {
+    height: 5.21vh; 
+}
+
+.btn-enviar {
+    padding: 0.83vh 1.67vw;
+    border: none;
+    border-radius: 0.52vw;
+    background-color: var(--color-boton-pago);
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: darken(var(--color-boton-pago), 10%);
+}
+
+/* Media Queries */
+
+/* Dispositivos grandes (hasta 1920px de ancho) */
+@media (max-width: 1921px) {
+    /* Agrega aquí estilos específicos para dispositivos grandes */
+}
+
+@media (max-width: 1920px) {
+    /* Agrega aquí estilos específicos para dispositivos grandes */
+}
+
+/* Portátiles grandes (hasta 1440px de ancho) */
+@media (max-width: 1440px) {
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        left: 5vw; 
+        bottom: 2vh;
+    }
+    .animalitos {
+        transform: scale(0.8);
+        left: 34vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.6);
+        left: 30vw;
+        bottom: 13vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.5);
+        left: 21vw; 
+        bottom: 14vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 1.1vw; 
+    }
+    .formulario-contenedor {
+        max-width: 20%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 0.5vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+/* Portátiles medianos y algunos tablets en modo paisaje (hasta 1366px de ancho) */
+@media (max-width: 1366px) and (max-height: 768px) {
+    
+    
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after{
+        width: 90%; 
+    }
+    .logos {
+        transform: scale(0.9);
+        left: 5vw; 
+        bottom: 2vh;
+        
+    }
+    .animalitos {
+        transform: scale(0.7);
+        left: 32vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.5);
+        left: 28vw;
+        bottom: 11vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.5);
+        left: 19vw; 
+        bottom: 13vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 1vw; 
+    }
+    .formulario-contenedor {
+        max-width: 20%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    
+    .formulario-inscripcion p {
+        font-size: 1.5vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 1.5vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+/* Portátiles pequeños y algunos tablets en modo paisaje (hasta 1280px de ancho) */
+@media (max-width: 1280px) {
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        left: 5vw; 
+        bottom: 2vh;
+    }
+    .animalitos {
+        transform: scale(0.7);
+        left: 32vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.5);
+        left: 28vw;
+        bottom: 14vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.5);
+        left: 19vw; 
+        bottom: 16vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 1.5vw; 
+    }
+    .formulario-contenedor {
+        max-width: 20%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1.3vh;
+    }
+    
+    .formulario-inscripcion p {
+        font-size: 1.5vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 0.5vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+/* Tablets en modo paisaje (hasta 1024px de ancho) */
+@media (max-width: 1024px) {
+    
+    body {
+    background-size: 100%;
+    }
+    
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        left: 45vw; 
+        bottom: 2vh;
+    }
+    .animalitos {
+        transform: scale(0.5);
+        left: 25vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.4);
+        left: 18vw;
+        bottom: 18vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.3);
+        left: 6vw; 
+        bottom: 20vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 1.5vw; 
+    }
+    .formulario-contenedor {
+        max-width: 30%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1.3vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 1.5vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1.5vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+/* Tablets en modo retrato (hasta 768px de ancho) */
+@media (max-width: 768px) {
+    
+    body {
+    background-size: 100%;
+    }
+    
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        transform: scale(1.1);
+        left: 45vw; 
+        bottom: 2vh;
+    }
+    .animalitos {
+        transform: scale(0.5);
+        left: 12vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.4);
+        left: 3vw;
+        bottom: 18vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.3);
+        left: -13vw; 
+        bottom: 20vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 2vw; 
+    }
+    .formulario-contenedor {
+        max-width: 30%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 1.5vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+
+/* Celulares (hasta 720px de ancho) */
+@media (max-width: 720px) {
+    
+    body {
+    background-size: 100%;
+    }
+    
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        transform: scale(1.5);
+        left: 43vw; 
+        bottom: 2vh;
+    }
+    .animalitos {
+        transform: scale(0.5);
+        left: 8vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.4);
+        left: -2vw;
+        bottom: 18vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.3);
+        left: -18vw; 
+        bottom: 20vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 2.5vw; 
+    }
+    .formulario-contenedor {
+        max-width: 30%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 1vw; 
+        font-size: 1vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+
+/* Móviles grandes (hasta 414px de ancho) */
+@media (max-width: 414px) {
+    
+    body {
+        background-size: 100%; /* Ajusta el tamaño del fondo para que sea un poco más pequeño */
+        background-position: center 15%; /* Mueve el fondo hacia arriba */
+    }
+    
+    .menu-principal {
+        padding: 5vh 2vw;
+    }
+    .menu-principal::after {
+        width: 90%;
+    }
+    .logos {
+        transform: scale(3.0);
+        left: 45vw;
+        bottom: 4vh;
+    }
+    .animalitos {
+        transform: scale(0.5);
+        left: -22vw;
+        bottom: 27vh;
+    }
+    .logo-letras {
+        transform: scale(0.4);
+        left: -41vw;
+        bottom: 18vh;
+    }
+    .letra-abajo {
+        transform: scale(0.3);
+        left: -70vw;
+        bottom: 21vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw;
+    }
+    .menu-principal li {
+        margin-left: 3vw;
+        font-size: 3.5vw;
+    }
+    .formulario-contenedor {
+        max-width: 70%;
+        padding: 2vh;
+        border-radius: 1vw;
+    }
+    .formulario-inscripcion input {
+        padding: 1vh;
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1.3vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw;
+        font-size: 2vw;
+    }
+    .formulario-contacto textarea {
+        height: 8vh;
+    }
+    .formulario-contacto label {
+        font-size: 1.3vh;
+    }
+    .formulario-contacto span {
+        font-size: 1vh;
+    }
+}
+
+/* Móviles medianos (hasta 375px de ancho) */
+@media (max-width: 375px) {
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        transform: scale(3.0);
+        left: 45vw; 
+        bottom: 8vh;
+    }
+    .animalitos {
+        transform: scale(0.4);
+        left: -30vw; 
+        bottom: 27vh; 
+    }
+    .logo-letras {
+        transform: scale(0.3);
+        left: -49vw;
+        bottom: 20vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.2);
+        left: -80vw; 
+        bottom: 25vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 3vw; 
+    }
+    .formulario-contenedor {
+        max-width: 70%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 1.5vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 3vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}
+
+/* Móviles pequeños (hasta 320px de ancho) */
+@media (max-width: 320px) {
+    .menu-principal {
+        padding: 5vh 2vw; 
+    }
+    .menu-principal::after {
+        width: 90%; 
+    }
+    .logos {
+        transform: scale(3.0);
+        left: 45vw; 
+        bottom: 10vh;
+    }
+    .animalitos {
+        transform: scale(0.4);
+        left: -48vw; 
+        bottom: 30vh; 
+    }
+    .logo-letras {
+        transform: scale(0.3);
+        left: -70vw;
+        bottom: 23vh; 
+    }
+    .letra-abajo {
+        transform: scale(0.2);
+        left: -108vw; 
+        bottom: 27vh;
+    }
+    .menu-principal ul {
+        padding: 1vh 5vw; 
+    }
+    .menu-principal li {
+        margin-left: 3vw; 
+        font-size: 3.5vw; 
+    }
+    .formulario-contenedor {
+        max-width: 80%; 
+        padding: 2vh; 
+        border-radius: 1vw; 
+    }
+    .formulario-inscripcion input {
+        padding: 1vh; 
+        font-size: 2vh;
+    }
+    .formulario-inscripcion label {
+        font-size: 1vh;
+    }
+    .formulario-inscripcion span {
+        font-size: 1vh;
+    }
+    .btn-gestionar,
+    .btn-confirmar {
+        padding: 1vh 2vw; 
+        font-size: 3vw; 
+    }
+    .formulario-contacto textarea {
+        height: 8vh; 
+    }
+    .formulario-contacto label {
+        font-size: 1vh; 
+    }
+    .formulario-contacto span {
+        font-size: 1vh; 
+    }
+}

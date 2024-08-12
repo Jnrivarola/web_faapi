@@ -1,0 +1,5048 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    overflow-x: hidden;
+}
+
+.menu-nuevo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000; /* Fondo negro */
+    padding: 1.5vh 2vw;
+    text-align: right;
+    z-index: 1000;
+}
+
+.menu-nuevo::after {
+    content: '';
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+    border-bottom: 0.2vh solid #FFFFFF;
+}
+
+.menu-nuevo ul {
+    list-style: none;
+    margin: 0;
+    padding: 1vh 5vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-nuevo li {
+    margin-left: 2vw;
+    font-size: 1.5em;
+}
+
+.menu-nuevo .enlace-nuevo a {
+    display: inline-block;
+    color: #FFFFFF; /* Letras blancas */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.menu-nuevo .enlace-nuevo a:hover {
+    transform: scale(1.1);
+}
+
+main {
+    margin-top: 8vh;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 2vw;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    scroll-margin-top: 8vh;
+}
+
+/* Estilos específicos para cada sección */
+#faapi {
+    background-image: url('../img/fondop1.jpg');
+}
+
+#whatisfaapi {
+    background-image: url('../img/fondo4.png');
+}
+
+#committee {
+    background-color: #B3B3B3;
+}
+
+#supports {
+    background-image: url('../img/fondo2.jpg');
+}
+
+#consultants {
+    background-color: #000;
+    min-height: 150vh; /* Ajusta la altura mínima aquí */
+    position: relative;
+    overflow: hidden;
+}
+
+#news {
+    background-image: url('../img/fondo9.jpg');
+}
+
+#about {
+    background-color: #000;
+}
+
+/* Ajustes para las imágenes */
+.faapi-image {
+    width: auto;
+    max-width: 12vw; /* Usa vw para un tamaño más responsive */
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+}
+
+.lo-ver {
+    width: auto;
+    max-width: 7vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 28vh;
+    left: 5vw;
+}
+
+
+.triangulitos {
+    width: auto;
+    max-width: 30vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 7vh;
+    left: 16vw;
+}
+
+.animalitos {
+    width: auto;
+    max-width: 30vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 8vh;
+    left: 50vw;
+}
+
+.letras {
+    width: auto;
+    max-width: 40vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 33vh;
+    left: 40vw;
+}
+
+.federacion {
+    width: auto;
+    max-width: 50vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 53vh;
+    left: 32vw;
+}
+
+/* what is faapi */
+.texto-faapi {
+    width: auto;
+    max-width: 35vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 20vw;
+}
+
+.logo-faapi-2 {
+    width: auto;
+    max-width: 20vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 20vh;
+    left: 60vw;
+}
+
+/* committee */
+.titulo-comitee {
+    font-size: 4vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 1vh;
+    left: 50vw;
+}
+
+.congre {
+    width: auto;
+    max-width: 18vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+}
+
+.log-ver {
+    width: 5vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 55vh;
+    left: 90vw;
+}
+
+.euge {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 40vh;
+    left: 25vw;
+}
+.maria {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 40vw;
+}
+.maricel {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 50vw;
+}
+.aurelia {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 60vw;
+}
+.anabella {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 70vw;
+}
+.gisela {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 55vh;
+    left: 40vw;
+}
+.ariel {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 55vh;
+    left: 50vw;
+}
+.mariamarta {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 55vh;
+    left: 60vw;
+}
+.marianoe {
+    width: 8vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 55vh;
+    left: 70vw;
+}
+/* supports */
+.titulo-supports {
+    font-size: 3vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 5vh;
+    left: 75vw;
+}
+
+.congre-sup {
+    width: auto;
+    max-width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 4vw;
+}
+
+.log-ver-sup {
+    width: 5vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 56vh;
+    left: 92vw;
+}
+
+.log-untdf {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 12vw;
+}
+
+.log-uvmaria {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 28vw;
+}
+
+.log-ricelt {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 44vw;
+}
+
+.log-ort {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+}
+
+.log-fde {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 48vh;
+    left: 28vw;
+}
+
+.log-unpaz {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 48vh;
+    left: 44vw;
+}
+
+.log-camelta {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 48vh;
+    left: 60vw;
+}
+
+.log-gonzalez {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 66vh;
+    left: 44vw;
+}
+
+.log-eltan {
+    width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 66vh;
+    left: 60vw;
+}
+
+.log-tr-inv {
+    width: auto;
+    max-width: 25vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 63vh;
+    left: 0;
+}
+
+/* consultants */
+.pag-sec-container {
+    display: flex;
+    flex-direction: column; /* Organiza las filas en una columna */
+    align-items: center; /* Centra las filas horizontalmente */
+    width: 100%;
+}
+
+.pag-sec-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+.pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+    width: 45%; /* Ajusta el ancho según sea necesario */
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+img {
+    display: block; /* Elimina el espacio blanco debajo de las imágenes */
+    width: 100%; /* Asegura que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina rellenos adicionales */
+    border: none; /* Elimina bordes adicionales */
+}
+
+/* Inicialmente, las imágenes están ocultas */
+.pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Clase para mostrar las imágenes con animación */
+.pag-sec-visible {
+    opacity: 1;
+}
+
+/* news */
+.log-con {
+    width: auto;
+    max-width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+}
+
+.log-coo {
+    width: auto;
+    max-width: 20vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 10vw;
+}
+
+.log-faa {
+    width: auto;
+    max-width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 30vh;
+    left: 60vw;
+}
+
+/* about */
+.tri-inv {
+    width: auto;
+    max-width: 25vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 62vh;
+    left: 0;
+}
+
+.log-cong {
+    width: auto;
+    max-width: 15vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 2vh;
+    left: 8vw;
+}
+
+.direccion {
+    font-size: 1em;
+    text-align: left;
+    position: absolute;
+    top: 27vh;
+    left: 8vw;
+}
+
+.data {
+    width: 11vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 15vh;
+    left: 60vw;
+}
+
+.log-hori {
+    width: 25vw;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 70vh;
+    left: 55vw;
+}
+
+/* Media Queries */
+
+/* Dispositivos grandes (hasta 1920px de ancho) */
+@media (max-width: 1921px) {
+    
+    .lo-ver {
+        width: auto;
+        max-width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 24vh;
+        left: 5vw;
+    }
+    .tri-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+
+    .log-tr-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 10vh;
+        left: 60vw;
+    }
+}
+
+
+@media (max-width: 1920px) {
+    .tri-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+
+    .log-tr-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 10vh;
+        left: 60vw;
+    }
+}
+
+/* Portátiles grandes (hasta 1440px de ancho) */
+@media (max-width: 1440px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 2vw;
+        font-size: 1.5em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 12vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 5vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 7vh;
+        left: 16vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 50vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 33vh;
+        left: 40vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 4vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 1vh;
+        left: 50vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    .maria {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 40vw;
+    }
+    .maricel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 50vw;
+    }
+    .aurelia {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 60vw;
+    }
+    .anabella {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 70vw;
+    }
+    .gisela {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 40vw;
+    }
+    .ariel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 50vw;
+    }
+    .mariamarta {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 60vw;
+    }
+    .marianoe {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 70vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 56vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 10vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 2vw;
+        font-size: 1.2em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 12vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 5vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 7vh;
+        left: 18vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 50vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 33vh;
+        left: 38vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 3vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 4vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 1vh;
+        left: 50vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 58vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    .maria {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 40vw;
+    }
+    .maricel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 50vw;
+    }
+    .aurelia {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 60vw;
+    }
+    .anabella {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 70vw;
+    }
+    .gisela {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 40vw;
+    }
+    .ariel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 50vw;
+    }
+    .mariamarta {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 60vw;
+    }
+    .marianoe {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 70vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 6vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 56vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 16vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 2vw;
+        font-size: 1.2em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 12vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 5vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 7vh;
+        left: 18vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 50vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 33vh;
+        left: 38vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 3vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 4vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 1vh;
+        left: 50vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 58vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    .maria {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 40vw;
+    }
+    .maricel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 50vw;
+    }
+    .aurelia {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 60vw;
+    }
+    .anabella {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 70vw;
+    }
+    .gisela {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 40vw;
+    }
+    .ariel {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 50vw;
+    }
+    .mariamarta {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 60vw;
+    }
+    .marianoe {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 70vw;
+    }
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 6vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 56vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 16vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 2vw;
+        font-size: 1.2em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 12vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 5vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 18vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 32vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 50vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 38vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 10vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 19vh;
+        left: 60vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 1vh;
+        left: 55vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 18vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 58vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    .maria {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 40vw;
+    }
+    .maricel {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 51vw;
+    }
+    .aurelia {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 62vw;
+    }
+    .anabella {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 73vw;
+    }
+    .gisela {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 40vw;
+    }
+    .ariel {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 51vw;
+    }
+    .mariamarta {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 62vw;
+    }
+    .marianoe {
+        width: 10vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 73vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 6vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 63vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 27vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 16vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 27vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 2vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 75vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 3vw;
+        font-size: 1em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 15vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 21vh;
+        left: 6vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 20vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 37vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 54vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 38vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 37vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 23vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 24vh;
+        left: 61vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 4vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 3vh;
+        left: 55vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 62vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 20vw;
+    }
+    .maria {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 35vw;
+    }
+    .maricel {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 48vw;
+    }
+    .aurelia {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 61vw;
+    }
+    .anabella {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 74vw;
+    }
+    .gisela {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 35vw;
+    }
+    .ariel {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 48vw;
+    }
+    .mariamarta {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 61vw;
+    }
+    .marianoe {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 74vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 17vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 32vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 74vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 16vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 77vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: right;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 4.2vw;
+        font-size: 0.8em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 15vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 21vh;
+        left: 6vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 20vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 37vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 8vh;
+        left: 54vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 38vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 37vh;
+        left: 32vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 40vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 23vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 24vh;
+        left: 61vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 4vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 3vh;
+        left: 55vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 2vw;
+    }
+    
+    .log-ver {
+        width: 8vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 62vh;
+        left: 90vw;
+    }
+    .euge {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 20vw;
+    }
+    .maria {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 35vw;
+    }
+    .maricel {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 48vw;
+    }
+    .aurelia {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 61vw;
+    }
+    .anabella {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 25vh;
+        left: 74vw;
+    }
+    .gisela {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 35vw;
+    }
+    .ariel {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 48vw;
+    }
+    .mariamarta {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 61vw;
+    }
+    .marianoe {
+        width: 12vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 55vh;
+        left: 74vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 3vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 75vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 17vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 4vw;
+    }
+    
+    .log-ver-sup {
+        width: 7vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 92vw;
+    }
+    
+    .log-untdf {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 12vw;
+    }
+    
+    .log-uvmaria {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 28vw;
+    }
+    
+    .log-ricelt {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 44vw;
+    }
+    
+    .log-ort {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    .log-fde {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 28vw;
+    }
+    
+    .log-unpaz {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 44vw;
+    }
+    
+    .log-camelta {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 60vw;
+    }
+    
+    .log-gonzalez {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 44vw;
+    }
+    
+    .log-eltan {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 66vh;
+        left: 60vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 32vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 74vh;
+        left: 0;
+    }
+    
+    /* consultants */
+    .pag-sec-container {
+        display: flex;
+        flex-direction: column; /* Organiza las filas en una columna */
+        align-items: center; /* Centra las filas horizontalmente */
+        width: 100%;
+    }
+    
+    .pag-sec-row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        width: 45%; /* Ajusta el ancho según sea necesario */
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Asegura que no haya desbordamiento */
+        margin-bottom: 2vw; /* Ajusta el margen inferior según sea necesario */
+    }
+    
+    img {
+        display: block; /* Elimina el espacio blanco debajo de las imágenes */
+        width: 100%; /* Asegura que las imágenes llenen el contenedor */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos adicionales */
+        border: none; /* Elimina bordes adicionales */
+    }
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 16vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 30vh;
+        left: 60vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 35vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 72vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 5vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 27vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 77vh;
+        left: 55vw;
+    }
+}
+
+@media (max-width: 414px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 3vw;
+        font-size: 0.8em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Ocultar todos los elementos del menú */
+.menu-nuevo li {
+    display: none;
+}
+
+/* Mostrar el primer y segundo elemento del menú */
+.menu-nuevo li:nth-child(1),
+.menu-nuevo li:nth-child(2) {
+    display: block;
+}
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 26vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 14vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 32vh;
+        left: 6vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 30vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 48vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 42vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 60vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 65vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 23vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 60vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 35vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 27vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 5vw;
+    }
+    
+    .log-ver {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 87vw;
+    }
+    .euge {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 40vw;
+    }
+    .maria {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 15vw;
+    }
+    .maricel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 32vw;
+    }
+    .aurelia {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 49vw;
+    }
+    .anabella {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 66vw;
+    }
+    .gisela {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 15vw;
+    }
+    .ariel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 32vw;
+    }
+    .mariamarta {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 49vw;
+    }
+    .marianoe {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 66vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 70vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 35vw;
+    }
+    
+    .log-ver-sup {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 75vh;
+        left: 86vw;
+    }
+    
+    .log-untdf {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 4vw;
+    }
+    
+    .log-uvmaria {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 27vw;
+    }
+    
+    .log-ricelt {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 50vw;
+    }
+    
+    .log-ort {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 73vw;
+    }
+    
+    .log-fde {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 4vw;
+    }
+    
+    .log-unpaz {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 27vw;
+    }
+    
+    .log-camelta {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+    }
+    
+    .log-gonzalez {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 73vw;
+    }
+    
+    .log-eltan {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 40vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 78vh;
+        left: 0;
+    }
+    
+    /* consultants */
+.pag-sec-container {
+    display: flex;
+    flex-direction: column; /* Organiza las filas en una columna */
+    align-items: center; /* Centra las filas horizontalmente */
+    width: 100%;
+}
+
+.pag-sec-row {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    width: 100%;
+    justify-content: center; /* Centra las imágenes */
+    margin-bottom: 5vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+.pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+    width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    margin-bottom: 3vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+img {
+    display: block; /* Elimina el espacio blanco debajo de las imágenes */
+    width: 100%; /* Asegura que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina rellenos adicionales */
+    border: none; /* Elimina bordes adicionales */
+}
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 40vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 40vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 79vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 32vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 77vh;
+        left: 50vw;
+    }
+}
+
+@media (max-width: 375px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 3vw;
+        font-size: 0.8em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Ocultar todos los elementos del menú */
+.menu-nuevo li {
+    display: none;
+}
+
+/* Mostrar el primer y segundo elemento del menú */
+.menu-nuevo li:nth-child(1),
+.menu-nuevo li:nth-child(2) {
+    display: block;
+}
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 26vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 2vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 14vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 32vh;
+        left: 6vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 30vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 48vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 42vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 60vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 25vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 65vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 48vh;
+        left: 23vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 60vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 35vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 60vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 27vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 5vw;
+    }
+    
+    .log-ver {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 70vh;
+        left: 87vw;
+    }
+    .euge {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 40vw;
+    }
+    .maria {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 15vw;
+    }
+    .maricel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 32vw;
+    }
+    .aurelia {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 49vw;
+    }
+    .anabella {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 66vw;
+    }
+    .gisela {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 15vw;
+    }
+    .ariel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 32vw;
+    }
+    .mariamarta {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 49vw;
+    }
+    .marianoe {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 66vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 70vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 35vw;
+    }
+    
+    .log-ver-sup {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 75vh;
+        left: 86vw;
+    }
+    
+    .log-untdf {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 4vw;
+    }
+    
+    .log-uvmaria {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 27vw;
+    }
+    
+    .log-ricelt {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 50vw;
+    }
+    
+    .log-ort {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 73vw;
+    }
+    
+    .log-fde {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 4vw;
+    }
+    
+    .log-unpaz {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 27vw;
+    }
+    
+    .log-camelta {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+    }
+    
+    .log-gonzalez {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 73vw;
+    }
+    
+    .log-eltan {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 40vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 78vh;
+        left: 0;
+    }
+    
+    /* consultants */
+.pag-sec-container {
+    display: flex;
+    flex-direction: column; /* Organiza las filas en una columna */
+    align-items: center; /* Centra las filas horizontalmente */
+    width: 100%;
+}
+
+.pag-sec-row {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    width: 100%;
+    justify-content: center; /* Centra las imágenes */
+    margin-bottom: 5vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+.pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+    width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    margin-bottom: 3vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+img {
+    display: block; /* Elimina el espacio blanco debajo de las imágenes */
+    width: 100%; /* Asegura que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina rellenos adicionales */
+    border: none; /* Elimina bordes adicionales */
+}
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 40vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 40vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 79vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 32vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 77vh;
+        left: 50vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .menu-nuevo {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #000; /* Fondo negro */
+        padding: 1.5vh 2vw;
+        text-align: center;
+        z-index: 1000;
+    }
+    
+    .menu-nuevo::after {
+        content: '';
+        display: block;
+        width: 80vw;
+        margin: 0 auto;
+        border-bottom: 0.2vh solid #FFFFFF;
+    }
+    
+    .menu-nuevo ul {
+        list-style: none;
+        margin: 0;
+        padding: 1vh 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .menu-nuevo li {
+        margin-left: 3vw;
+        font-size: 0.8em;
+    }
+    
+    .menu-nuevo .enlace-nuevo a {
+        display: inline-block;
+        color: #FFFFFF; /* Letras blancas */
+        text-decoration: none;
+        transition: transform 0.3s ease;
+    }
+    
+    .menu-nuevo .enlace-nuevo a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Ocultar todos los elementos del menú */
+.menu-nuevo li {
+    display: none;
+}
+
+/* Mostrar el primer y segundo elemento del menú */
+.menu-nuevo li:nth-child(1),
+.menu-nuevo li:nth-child(2) {
+    display: block;
+}
+    
+    main {
+        margin-top: 8vh;
+    }
+    
+    .section {
+        min-height: 100vh;
+        padding: 2vw;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        box-sizing: border-box;
+        scroll-margin-top: 8vh;
+    }
+    .faapi-image {
+        width: auto;
+        max-width: 30vw; /* Usa vw para un tamaño más responsive */
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 16vh;
+        left: 63vw;
+    }
+    
+    .lo-ver {
+        width: auto;
+        max-width: 15vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 33vh;
+        left: 2vw;
+    }
+    
+    
+    .triangulitos {
+        width: auto;
+        max-width: 65vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 0vw;
+    }
+    
+    .animalitos {
+        width: auto;
+        max-width: 60vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 26vh;
+        left: 33vw;
+    }
+    
+    .letras {
+        width: auto;
+        max-width: 65vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 36vh;
+        left: 25vw;
+    }
+    
+    .federacion {
+        width: auto;
+        max-width: 73vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 23vw;
+    }
+    
+    /* what is faapi */
+    .texto-faapi {
+        width: auto;
+        max-width: 70vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 20vw;
+    }
+    
+    .logo-faapi-2 {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 53vh;
+        left: 35vw;
+    }
+    
+    /* committee */
+    .titulo-comitee {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 60vw;
+    }
+    
+    .congre {
+        width: auto;
+        max-width: 27vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 18vh;
+        left: 5vw;
+    }
+    
+    .log-ver {
+        width: 13vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 73vh;
+        left: 85vw;
+    }
+    .euge {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 40vw;
+    }
+    .maria {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 15vw;
+    }
+    .maricel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 32vw;
+    }
+    .aurelia {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 49vw;
+    }
+    .anabella {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 66vw;
+    }
+    .gisela {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 15vw;
+    }
+    .ariel {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 32vw;
+    }
+    .mariamarta {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 49vw;
+    }
+    .marianoe {
+        width: 16vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 66vw;
+    }
+    
+    /* supports */
+    .titulo-supports {
+        font-size: 5vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 15vh;
+        left: 70vw;
+    }
+    
+    .congre-sup {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 28vh;
+        left: 35vw;
+    }
+    
+    .log-ver-sup {
+        width: 11vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 75vh;
+        left: 86vw;
+    }
+    
+    .log-untdf {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 4vw;
+    }
+    
+    .log-uvmaria {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 27vw;
+    }
+    
+    .log-ricelt {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 50vw;
+    }
+    
+    .log-ort {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 43vh;
+        left: 73vw;
+    }
+    
+    .log-fde {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 4vw;
+    }
+    
+    .log-unpaz {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 27vw;
+    }
+    
+    .log-camelta {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+    }
+    
+    .log-gonzalez {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 50vh;
+        left: 73vw;
+    }
+    
+    .log-eltan {
+        width: 22vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 57vh;
+        left: 40vw;
+    }
+    
+    .log-tr-inv {
+        width: auto;
+        max-width: 50vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 79vh;
+        left: 0;
+    }
+    
+    /* consultants */
+.pag-sec-container {
+    display: flex;
+    flex-direction: column; /* Organiza las filas en una columna */
+    align-items: center; /* Centra las filas horizontalmente */
+    width: 100%;
+}
+
+.pag-sec-row {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    width: 100%;
+    justify-content: center; /* Centra las imágenes */
+    margin-bottom: 5vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+.pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+    width: 100%; /* Asegura que cada imagen ocupe el 100% del contenedor */
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+    margin-bottom: 3vw; /* Ajusta el margen inferior según sea necesario */
+}
+
+img {
+    display: block; /* Elimina el espacio blanco debajo de las imágenes */
+    width: 100%; /* Asegura que las imágenes llenen el contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina rellenos adicionales */
+    border: none; /* Elimina bordes adicionales */
+}
+    
+    /* Inicialmente, las imágenes están ocultas */
+    .pag-sec1, .pag-sec2, .pag-sec3, .pag-sec4 {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+    
+    /* Clase para mostrar las imágenes con animación */
+    .pag-sec-visible {
+        opacity: 1;
+    }
+    
+    /* news */
+    .log-con {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 2vw;
+    }
+    
+    .log-coo {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 40vh;
+        left: 40vw;
+    }
+    
+    .log-faa {
+        width: auto;
+        max-width: 25vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 40vw;
+    }
+    
+    /* about */
+    .tri-inv {
+        width: auto;
+        max-width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 81vh;
+        left: 0;
+    }
+    
+    .log-cong {
+        width: auto;
+        max-width: 30vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20vh;
+        left: 8vw;
+    }
+    
+    .direccion {
+        font-size: 1em;
+        text-align: left;
+        position: absolute;
+        top: 32vh;
+        left: 8vw;
+    }
+    
+    .data {
+        width: 20vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 60vh;
+        left: 60vw;
+    }
+    
+    .log-hori {
+        width: 45vw;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 77vh;
+        left: 50vw;
+    }
+}
+

@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: #FC910F;
+}
+
+a{
+    color: #FC910F;
+}
+
+p{
+    color: #FFFFFF;
+}
+
+.normas{
+    font-size: 10px;
+    
+}
